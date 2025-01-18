@@ -5,6 +5,7 @@
     --white: hsl(var(--h), 92%, 95%);
     --black: hsl(var(--h), 15%, 10%);
     --neutral: hsl(var(--h),  var(--n), var(--n));
+    --font: 2.4rem;
 }
 
 * {
@@ -17,22 +18,54 @@ html {
   font-size: 62.5%
 }
 
+/* header*/
+header {
+  background-color: var(--primary-color);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /*logo*/
+.logotipo {
+  font-size: 2rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 5.2rem;
+  height: 5.2rem;
+  margin: 1.6rem 1rem 1.6rem 1.6rem ;
+}
+
+.toggle-lang {
+  margin: 1.6rem;
+  align-items: center;
+  justify-content: end;
+}
 
 /*lang*/
+.lan {
+  margin-right: 1rem;
+}
 
 /*toggle From Uiverse.io by catraco */ 
 .switch-name {
     --dark-sky: var(--black);
-    --moon: var(--white);
-    --light-sky: var(--primary-color);
-    --sun: var(--white);
+    --moon: #ffd500;
+    --light-sky: var(--white);
+    --sun: #ffd500;
     display: inline-block;
     position: relative;
     border-radius: 5em;
     cursor: pointer;
-    width: 60px;
-    height: 30px;
+    width: 4.8rem;
+    height: 2.4rem;
     overflow: hidden;
     transition: all .5s;
   }
@@ -87,3 +120,36 @@ html {
   }
 
   /* nav */
+
+  nav {
+    color: var(--white);
+    padding: 1.6rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border: 0.1rem solid var(--white);
+    border-radius: 20px;
+    width: 8rem;
+    height: 2.4rem;
+  }
+  
+  nav a {
+    color: var(--white);
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: var(--white);
+  }
