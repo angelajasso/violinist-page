@@ -5,13 +5,17 @@
     --white: hsl(var(--h), 92%, 95%);
     --black: hsl(var(--h), 15%, 10%);
     --neutral: hsl(var(--h),  var(--n), var(--n));
-    --font: 2.4rem;
+    --font-family: Open Sans, sans-serif;
+	  --font-size: 1.6rem;
+	  --font-line-height: 1.5;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -56,7 +60,7 @@ header {
 
 /*toggle From Uiverse.io by catraco */ 
 .switch-name {
-    --dark-sky: var(--black);
+    --dark-sky: var(--neutral);
     --moon: #ffd500;
     --light-sky: var(--white);
     --sun: #ffd500;
@@ -138,18 +142,39 @@ header {
   nav li {
     display: inline-block;
     margin: 0 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     border: 0.1rem solid var(--white);
     border-radius: 20px;
     width: 8rem;
-    height: 2.4rem;
+    height: 3rem;
+    font-size: 1.6rem;
   }
   
   nav a {
     color: var(--white);
     text-decoration: none;
   }
-  
-  nav a:hover {
-    color: var(--white);
+
+  nav li:hover, nav li:active {
+    background-color: var(--neutral);
+  }
+
+  @container (width > 700px) {
+    header {
+      display: flex;
+      background-color: red;
+    }
+
+    .logotipo {
+      order: 1 ;
+    }
+
+    nav {
+      order: 2;
+      background-color: red;
+    }
+
+    .toggle-lang {
+      order: 3;
+    }
   }
