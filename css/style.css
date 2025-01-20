@@ -5,9 +5,9 @@
     --white: hsl(var(--h), 92%, 95%);
     --black: hsl(var(--h), 15%, 10%);
     --neutral: hsl(var(--h),  var(--n), var(--n));
-    --font-family: Open Sans, sans-serif;
 	  --font-size: 1.6rem;
 	  --font-line-height: 1.5;
+    --fweight: 700;
 }
 
 *,
@@ -16,20 +16,16 @@
 	box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: open Sans, Helvetica, sans-serif;
+  font-weight: var(--fweight);
 }
 
 html {
   font-size: 62.5%
+  
 }
 
-/* header*/
-/*header {
-  background-color: var(--primary-color);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  grid-template-rows: 1fr 1fr;
-}*/
+/*  header  */
 
 .header {
   background-color: var(--primary-color);
@@ -37,6 +33,7 @@ html {
   align-items: center;
   grid-template-columns: auto auto; /* Una sola columna */
   grid-template-rows: auto auto; /* Dos filas */
+  
 }
 
 /*logo*/
@@ -160,7 +157,7 @@ html {
     border-radius: 20px;
     width: 7.2rem;
     height: 3rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   
   .navegation a {
@@ -171,10 +168,12 @@ html {
   .navegation li:hover, .navegation li:active {
     background-color: var(--neutral);
   }
+  /*  aside  */
+  
 
   /* Estilos responsivos */
 @media (min-width: 650px) {
-
+  /*  header  */
   .header {
     grid-template-columns: auto auto auto; /* tres columnas */
     grid-template-rows: auto; /* una fila */
@@ -184,11 +183,11 @@ html {
     grid-column: 2; /* nav a segunda columna */
     grid-row: 1; /*Mover nav a la primera fila */
   }
-
+  /*  aside  */
 }
 
 @media (min-width: 900px) {
-
+  /*  header  */
   .eng {
     display: flex;
     align-items: center;
@@ -210,5 +209,5 @@ html {
   .lan {
     margin-right: 0.1rem;
   }
-
+  /*  aside  */
 }
