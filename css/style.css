@@ -16,17 +16,14 @@
 	box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: open Sans, Helvetica, sans-serif;
-  font-weight: var(--fweight);
-  color: var(--black);
 }
 
 html {
-  font-size: 62.5%
-}
-
-body {
+  font-size: 62.5%;
   background-color: var(--white);
+  font-family: open Sans, Helvetica, sans-serif;
+  font-weight: var(--fweight);
+  color: var(--black);
 }
 
 /*  header  */
@@ -228,12 +225,29 @@ body {
     justify-self: center;
   }
 
-  .text-about {
-    font-size: 2.4rem;
-    margin: 0 4rem;
+  .text-about, .text-project {
+    font-size: 1.6rem;
+    margin: 0 2.4rem;
     text-align: center;
     --fweight: 500;
     justify-self: center;
+  }
+
+  /* projects */
+  .projetc {
+    margin: 8rem 4rem;
+  }
+
+  .text-project {
+    margin: 2rem 0 4rem 0;
+  }
+
+  .card {
+    max-width: 300px;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    box-shadow: 0 1px 2px 0 var(--black);
+    border: 1px solid transparent;
   }
 
   /* Estilos responsivos */
@@ -259,8 +273,8 @@ body {
     font-size: 4rem;
   }
 
-  .text-about {
-    font-size: 2.8rem;
+  .text-about, .text-project {
+    font-size: 2.4rem;
   }
 }
 
