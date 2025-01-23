@@ -243,7 +243,7 @@ html {
   }
 
   .card {
-    max-width: 6400px;
+    max-width: 800px;
     border-radius: 20px;
     background-color: var(--primary-color);
     box-shadow: 0 1px 2px 0 var(--neutral);
@@ -316,6 +316,18 @@ html {
   .text-about, .text-project {
     font-size: 2.4rem;
   }
+
+  .content {
+    margin: 2rem 4rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .desc, .video {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 900px) {
@@ -374,7 +386,7 @@ html {
     --fweight: 900;
   }
 
-  .text-about {
+  .text-about, .text-project {
     margin: 0 2rem;
     grid-row: span 2;
     font-size: 3.2rem;
@@ -387,4 +399,49 @@ html {
     margin: 0 8rem;
     justify-self: center;
   }
+
+  .card {
+    display: grid;
+    max-width: 2000px;
+    margin: 4rem;
+    grid-template-columns: auto auto; 
+    grid-template-rows: auto auto auto;
+  }
+
+  .content {
+    padding: 0;
+    margin: 4rem;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    grid-column: 1; 
+    grid-row: 1;
+    text-align: center;
+  }
+
+  .desc, .video {
+    font-size: 2.4rem;
+  }
+
+  .desc {
+    margin: 2rem 0;
+    grid-column: 1; 
+    grid-row: 2;
+    text-align: center;
+  }
+
+  .video {
+    grid-column: 1; 
+    grid-row: 3;
+  }
+
+  .image {
+    grid-column: 2; 
+    grid-row: span 3;
+    width: 100%;
+    margin: 0;
+    align-self: center;
+  }
+
 }
