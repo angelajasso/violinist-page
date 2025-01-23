@@ -243,12 +243,52 @@ html {
   }
 
   .card {
-    max-width: 300px;
-    border-radius: 0.5rem;
+    max-width: 6400px;
+    border-radius: 20px;
     background-color: var(--primary-color);
-    box-shadow: 0 1px 2px 0 var(--black);
-    border: 1px solid transparent;
+    box-shadow: 0 1px 2px 0 var(--neutral);
+    border: 1px solid var(--neutral);
   }
+
+  .card a {
+    text-decoration: none
+  }
+  
+  .content {
+    padding: 2rem;
+    margin: 2rem;
+  }
+  
+  .image {
+    display: flex;
+    width: 80%;
+    margin: 4rem 4rem 2rem 4rem;
+    border-radius: 20px;
+    justify-self: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .desc {
+    margin: 2rem 0;
+    font-size: 1.6rem;
+  }
+  
+  .video {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: var(--neutral);
+    padding: 4px 16px;
+    border-radius: 20px;
+  }
+  
 
   /* Estilos responsivos */
 @media (min-width: 640px) {
