@@ -1,24 +1,20 @@
-const slider = document.querySelector('.carousel');
-const items = slider.querySelectorAll('.card');
-const sliderVisibleWidth = slider.offsetWidth;
+const carousel = document.querySelector('.carousel');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
 
-function getTotalItemsWidth(items) {
-    let totalWidth = 0;
-    items.forEach(item => {
-        totalWidth += item.offsetWidth;
-    });
-    return totalWidth;
+let currentIndex = 0;
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex > 0) ? currentIndex - 1 : 2; // Ciclo hacia atrás
+  updateCarousel();
+});
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex < 2) ? currentIndex + 1 : 0; // Ciclo hacia adelante
+  updateCarousel();
+});
+
+function updateCarousel() {
+  const offset = -currentIndex * 100;
+  carousel.style.transform = `translateX(${offset}%)`;
 }
-
-const totalItemsWidth = getTotalItemsWidth(items);
-const minXOffset = - (totalItemsWidth - sliderVisibleWidth);
-
-function renderCSS(slider, value) {
-    slider.style.transform = `translateX(${value}px)`;
-}
-
-function handleScroll() {
-    renderCSS(slider, slider.scrollLeft);
-}
-
-slider.addEventListener('scroll', handleScroll);
