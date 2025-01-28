@@ -2,6 +2,12 @@ const carousel = document.querySelector('.carousel');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 
+const preferedColorScheme = window.matchMedia("(prefers-color-scheme: dark)")
+  .matches
+  ? "dark"
+  : "light";
+const slider = document.getElementById("slider");
+
 let currentIndex = 0;
 
 prevBtn.addEventListener('click', () => {
@@ -18,12 +24,6 @@ function updateCarousel() {
   const offset = -currentIndex * 100;
   carousel.style.transform = `translateX(${offset}%)`;
 }
-
-const preferedColorScheme = window.matchMedia("(prefers-color-scheme: dark)")
-  .matches
-  ? "dark"
-  : "light";
-const slider = document.getElementById("slider");
 
 const setTheme = (theme) => {
   document.documentElement.setAttribute("data-theme", theme);

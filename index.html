@@ -19,11 +19,12 @@
                 <p>Angela Jasso</p>
         </div>
         <div class="toggle-lang">
-            <div class="lang-text">
+            <!-- 
+            <div class="lang-text" id="flags">
                 <img src="./image/language.svg" alt="language" class="lan">
                 <p class="eng">Esp</p>
-            </div>
-                
+            </div> 
+            -->
                 <label class="switch-name theme-switch">
                     <input type="checkbox" class="checkbox" id="slider" />
                     <div class="back"></div>
@@ -38,13 +39,13 @@
         <nav class="navegation">
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href="#" data-section="nav" data-value="one">Inicio</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="#about" data-section="nav" data-value="one">Sobre</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="#social" data-section="nav" data-value="one">Contacto</a>
                 </li>
             </ul>
         </nav>
@@ -57,7 +58,7 @@
         <img src="./image/violinist1.jpg" alt="gatito" class="gato-aside">
     </aside>
     <main>
-        <div class="about">
+        <div class="about" id="about">
             <h3 class="title-about">Sobre mí</h3>
             <img src="./image/about.jpg" alt="gatito" class="gato-about">
             <p class="text-about">"Soy Angela Jasso, un apasionado violinista de México, dedicado a explorar las infinitas posibilidades  de la Milagrosa música del violín."</p>
@@ -121,7 +122,7 @@
         </div>
     </main>
     <footer>
-        <div class="social">
+        <div class="social" id="social">
             <!-- From Uiverse.io by david-mohseni --> 
             <ul class="wrapper">
                 <li class="icon facebook">
